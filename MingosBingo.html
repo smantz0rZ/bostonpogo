@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poké-Mingo's Poké-Bingo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fcfaff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #4a4a4a;
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+        p.intro {
+            max-width: 600px;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #555;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        td {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #5d3a9b; /* Dark purple border */
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: #f2e6ff; /* Light purple background */
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            /* Allow text to break */
+            word-break: break-word;
+        }
+        
+        /* The "Completed" State */
+        td.completed {
+            background-color: #4CAF50; /* A nice "complete" green */
+            color: white;
+            text-decoration: line-through;
+            text-decoration-thickness: 2px;
+        }
+        
+        /* Adds a faint checkmark on complete */
+        td.completed::after {
+            content: '✔';
+            font-size: 60px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+        }
+
+        .footnotes {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+            max-width: 750px;
+            text-align: center;
+        }
+
+        /* Responsive design for phones */
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            td {
+                width: 18vw;
+                height: 18vw;
+                font-size: 0.7em;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Poké-Mingo's Poké-Bingo</h1>
+    <p class="intro">
+        Welcome to Pokémon GO Wild Area: Global! Speak with a Community Ambassador to claim prizes for completing lines in your bingo card. Thank you for joining us!
+    </p>
+
+    <table id="bingo-card">
+        <tbody>
+            <tr>
+                <td>Catch Shadow Cresselia or Shadow Darkrai</td>
+                <td>Follow a Route</td>
+                <td>Hatch a Pokémon from a 5 km egg</td>
+                <td>Catch 9 different species of mighty Pokémon</td>
+                <td>Complete the event Special Research to earn a Medal**</td>
+            </tr>
+            <tr>
+                <td>Catch 30 3-star Pokémon</td>
+                <td>Reach Level 100 of GO Pass: Into the Wild</td>
+                <td>Collect your daily limit of Max Particles for the day</td>
+                <td>Give a fist bump to a Community Ambassador</td>
+                <td>Pin a Postcard from a Community Ambassador PokéStop</td>
+            </tr>
+            <tr>
+                <td>Take an AR photo of your favorite Pokémon at Dunkin'</td>
+                <td>Catch a Pokémon with 10 CP</td>
+                <td>Check into all 5 meetups hosted by CAs in Campfire*</td>
+                <td>Catch Unown W, I, L, and D off Incense**</td>
+                <td>Trade Pokémon with 5 different Trainers</td>
+            </tr>
+            <tr>
+                <td>Dress your Avatar to match your Buddy Pokémon</td>
+                <td>Catch 10 species of Fairy-type Pokémon</td>
+                <td>Find a Shiny Pokémon</td>
+                <td>Catch a Pokémon with 617 CP</td>
+                <td>Catch a Pokémon from a Raid with a Special Background</td>
+            </tr>
+            <tr>
+                <td>Defeat Gigantamax Grimmsnarl</td>
+                <td>Have a Surprise Encounter in GO Snapshot</td>
+                <td>Catch 10 species of Dark-type Pokémon</td>
+                <td>Earn at least 12 hearts with your Buddy for the day</td>
+                <td>Take an AR photo of Bewear wearing a costume</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footnotes">
+        <p>*Not applicable for Trainers with a Niantic Kids account.</p>
+        <p>**Event ticket required.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Get all the bingo squares (cells)
+            const squares = document.querySelectorAll('#bingo-card td');
+        
+            // Add a click event listener to each square
+            squares.forEach(square => {
+                square.addEventListener('click', () => {
+                    // Toggle the 'completed' class on click
+                    square.classList.toggle('completed');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
