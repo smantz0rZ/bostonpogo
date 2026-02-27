@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>'smantastic' PoGO Bingo!</title>
+	<link rel="icon" type="image/x-icon" href="pogo_logo.png">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -65,12 +66,13 @@
             vertical-align: middle;
             font-size: 1em;
             font-weight: bold;
+		vertical-align: top;
             background-color: #A8F7C4; /* Light green background */
             color: #333;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
-            word-break: break-word;
+            word-break: normal;
         }
         
         td.completed {
@@ -123,7 +125,7 @@
 <body>
 
     <div class="container">
-
+<div id="bingo-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.2); z-index:1000; pointer-events:none;"></div>
         <h2>'smantastic'<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -1289,41 +1291,41 @@
         <table id="bingo-card">
             <tbody>
                 <tr>
-                    <td style="background-image: url('https://preview.redd.it/xerneas-or-yveltal-which-is-the-best-v0-gshqet9kfoeg1.png?auto=webp&s=6b362da8ad8a211ce35d700a60d34cf2a14c28db'); background-position: bottom center; background-repeat: no-repeat; background-size: 70%;">Catch Xerneas or Yveltal</td>
-                    <td>Follow a Route</td>
-                    <td style="background-image: url('https://assets.dittobase.com/go/items/egg-5km.png'); background-position: bottom center; background-repeat: no-repeat; background-size: 40%;">Hatch a Pokémon from a 5 km egg</td>
-                    <td>Catch 9 different species of Pokémon</td>
-                    <td>Complete the event Special Research to earn a Medal**</td>
+                    <td style="background-image: url('https://preview.redd.it/xerneas-or-yveltal-which-is-the-best-v0-gshqet9kfoeg1.png?auto=webp&s=6b362da8ad8a211ce35d700a60d34cf2a14c28db'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 80%; vertical-align: top;">Catch Xerneas or Yveltal</td>
+                    <td style="background-image: url('https://static.wikia.nocookie.net/pokemongo/images/0/07/Routes.png/revision/latest/scale-to-width-down/300?cb=20230724104638'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 80%; vertical-align: top;">Follow a Route</td>
+                    <td style="background-image: url('https://assets.dittobase.com/go/items/egg-5km.png'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 40%; vertical-align: top;">Hatch a Pokémon from a 5 km egg</td>
+                    <td style="vertical-align: top;">Catch 9 different species of Pokémon</td>
+                    <td style="background-image: url('https://www.serebii.net/pokemongo/goldmedal.png'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 50%; vertical-align: top;">Complete the event Special Research to earn a Medal**</td>
                 </tr>
                 <tr>
-                    <td>Catch 30 3-star Pokémon</td>
-                    <td>Reach Level 100 of GO Pass: Road to Kalos</td>
-                    <td>Collect your daily limit of Max Particles for the day</td>
-                    <td style="background-image: url('Ambassador_Logo_2025.png'); background-position: bottom center; background-repeat: no-repeat; background-size: 50%;">Give a fist bump to a Community Ambassador</td>
-                    <td>Pin a Postcard from a Community Ambassador PokéStop</td>
+                    <td style="background-image: url('https://static.wikia.nocookie.net/pokemongo/images/0/0a/Appraisal_Rating_3.png/revision/latest/scale-to-width-down/250?cb=20190716115831'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 50%; vertical-align: top;">Catch 30 3-star Pokémon</td>
+                    <td style="background-image: url('https://lh3.googleusercontent.com/DqdihcOmAmRKH5DOfuoXUEVmVzrYKWwVjXRGAp9EX4L2RP45ZTlQm7mvY7D0YCWjIH9n6rV257lLbuhaa0gSW2vPjqpiFZGpf34m=s0-e365'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 50%; vertical-align: top;">Reach Level 100 of GO Pass: Road to Kalos</td>
+                    <td style="background-image: url('https://d2duuy9yo5pldo.cloudfront.net/niantic/0f7711c1-f974-412e-87bc-58d139c14b67'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 70%;">Collect your daily limit of Link Charges for the day</td>
+                    <td style="background-image: url('Ambassador_Logo_2025.png'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 60%;">Give a fist bump to a Community Ambassador</td>
+                    <td style="background-image: url('https://static.wikia.nocookie.net/pokemongo/images/f/f2/Postcard_Book.png/revision/latest?cb=20221216151613'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 30%;">Pin a Postcard from a Community Ambassador PokéStop</td>
                 </tr>
                 <tr>
-                    <td>Take an AR photo of your favorite Pokémon</td>
+                    <td style="background-image: url('https://assets.dittobase.com/go/items/camera.png'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 60%;">Take an AR photo of your favorite Pokémon</td>
                     <td>Catch a Pokémon with 10 CP</td>
-                    <td style="background-image: url('https://lh3.googleusercontent.com/ADighGSUCgLgxFcTNd5IzaxaSP33aI4eXVBP7wptwchikytto3LcQsg3VO14fKlcvYsZaRMVa8QOVx-_sxSMBwcseMGYZOZB1ux7JdAwR9SHYA=s0-e365'); background-position: bottom center; background-repeat: no-repeat; background-size: 30%;font-size: 1.10rem;">Check in to Campfire*</td>
+                    <td style="background-image: url('CampfireMeetups.png'); background-position: 50% 60%; background-repeat: no-repeat; background-size: 40%;font-size: 1.10rem; vertical-align: top;">Check in to Campfire*</td>
                     <td style="background-image: url('unown.webp');  background-repeat: no-repeat; 
     background-position: bottom right; 
     background-size: 40%; ">Catch K, A, L, O, S via Incense**</td>
-                    <td>Trade Pokémon with 5 different Trainers</td>
+                    <td style="background-image: url('trades.png'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 60%;">Trade Pokémon with 5 different Trainers</td>
                 </tr>
                 <tr>
-                    <td style="background-image: url('https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F149_mega.webp&w=640&q=75'); background-position: bottom center; background-repeat: no-repeat; background-size: 40%;">Defeat and catch a Mega Dragonite</td>
-                    <td style="background-image: url('https://lh3.googleusercontent.com/tEw6oZCFIrbcyuEJhFaDpy7FMyMVzRTKL3pO83x1VuCjD3B0aFPuKwxrZ3yDbGeutQ-05Rx2AaOqTHnvjgsIiYCnjIOA4HQplbJA-yoxUpjF3g'); background-position: bottom center; background-repeat: no-repeat; background-size: 30%;">Catch 5 species of Dragon-type Pokémon</td>
-                    <td style="background-image: url('https://static.thenounproject.com/png/3386874-200.png'); background-position: bottom center; background-repeat: no-repeat; background-size: 30%;">Find a Shiny Pokémon</td>
+                    <td style="background-image: url('https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F149_mega.webp&w=640&q=75'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 40%;">Defeat and catch a Mega Dragonite</td>
+                    <td style="background-image: url('https://lh3.googleusercontent.com/tEw6oZCFIrbcyuEJhFaDpy7FMyMVzRTKL3pO83x1VuCjD3B0aFPuKwxrZ3yDbGeutQ-05Rx2AaOqTHnvjgsIiYCnjIOA4HQplbJA-yoxUpjF3g'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 30%;">Catch 5 species of Dragon-type Pokémon</td>
+                    <td style="background-image: url('https://static.thenounproject.com/png/3386874-200.png'); background-position: 50% 70%; background-repeat: no-repeat; background-size: 30%;">Find a Shiny Pokémon</td>
                     <td>Catch a Pokémon with 617 CP</td>
                     <td>Catch a Pokémon from a Raid with a Special Background</td>
                 </tr>
                 <tr>
-                    <td style="background-image: url('https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/pokemon-legends-z-a/2025/08/21/inline/01.png'); background-position: bottom center; background-repeat: no-repeat; background-size: 50%;">Defeat and catch Mega Victreebel</td>
-                    <td>Have a Surprise Encounter in GO Snapshot</td>
-                    <td style="background-image: url('fairy.png'); background-position: bottom center; background-repeat: no-repeat; background-size: 30%;">Catch 5 species of Fairy-type Pokémon</td>
-                    <td>Earn at least 12 hearts with your Buddy for the day</td>
-                    <td>Take an AR photo of Pikachu wearing a costume</td>
+                    <td style="background-image: url('https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/pokemon-legends-z-a/2025/08/21/inline/01.png'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 50%;">Defeat and catch Mega Victreebel</td>
+                    <td style="background-image: url('https://pokemongohub.net/wp-content/uploads/2019/02/DzzFOAQXQAAt2V9.png'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 50%;">Have a Surprise Encounter in GO Snapshot</td>
+                    <td style="background-image: url('fairy.png'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 30%;">Catch 5 species of Fairy-type Pokémon</td>
+                    <td style="background-image: url('buddyhearts.png'); background-position: 50% 90%; background-repeat: no-repeat; background-size: 70%;">Earn at least 12 hearts with your Buddy for the day</td>
+                    <td style="background-image: url('https://lh3.googleusercontent.com/ADighGSUCgLgxFcTNd5IzaxaSP33aI4eXVBP7wptwchikytto3LcQsg3VO14fKlcvYsZaRMVa8QOVx-_sxSMBwcseMGYZOZB1ux7JdAwR9SHYA=s0-e365'); background-position: 50% 80%; background-repeat: no-repeat; background-size: 40%; vertical-align: top;">Share a Catch Card to Campfire!</td>
                 </tr>
             </tbody>
         </table>
