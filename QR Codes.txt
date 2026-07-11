@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'smantastic' PoGO Bingo!</title>
+	<link rel="icon" type="image/x-icon" href="pogo_logo.png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+            
+            /* --- NEW BACKGROUND RULES --- */
+            /* Make sure 'background.png' is in the same folder as this .html file */
+            background-image: url('PoGO_LoGO_GIF.gif');
+            background-position: right top;
+            background-size: 30%; /* Cover the whole screen */
+            background-repeat: no-repeat; /* Don't tile the image */
+            background-attachment: fixed; /* Image stays in place on scroll */
+            background-color: #FFFFFF; /* Fallback color if image fails */
+
+
+
+<center><br><br><br>
+<h2>Bingo Raffle!</h2><br>
+<img src='BingoRaffle.png"
+<br>
+<br><br><br><br><br><br><br><br><br>
+<h2>Scavenger Hunt Raffle!</h2><br>
+<img src='Scavenger Hunt Raffle.png'>
+<br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

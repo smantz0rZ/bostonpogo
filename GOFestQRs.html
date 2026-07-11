@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Codes</title>
+    <style>
+        /* Reset and layout */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Blank white background */
+            font-family: system-ui, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Full-screen container for each image */
+        .image-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* The image styling and scroll animation */
+        .scroll-image {
+            max-width: 85%;
+            max-height: 80vh;
+            object-fit: contain;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+
+            /* Modern CSS Scroll-Driven Animation */
+            animation: reveal linear both;
+            animation-timeline: view();
+            animation-range: entry 20% cover 40%;
+        }
+
+        /* Animation definition: Fade in and scale up slightly */
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+      Replace the placeholder URLs (https://via.placeholder.com/...) 
+      with your actual image file paths or web links.
+    -->
+    <section class="image-section">
+<h2>Bingo Raffle </h2><br>
+        <img class="scroll-image" src="Bingo Raffle.png" alt="Bingo Raffle">
+    </section>
+
+    <section class="image-section"> <h2>Scavenger Hunt </h2><br>
+        <img class="scroll-image" src="Scavenger Hunt Raffle.png" alt="Scavenger Hunt">
+    </section>
+
+    <section class="image-section"> <h2>Mass Hole Raffle</h2><br>
+        <img class="scroll-image" src="MassHole Raffle.png" alt="Image 3">
+    </section>
+
+    <section class="image-section"> <h2>BHN Raffle </h2><br>
+        <img class="scroll-image" src="BHN Raffle.png" alt="Image 4">
+    </section>
+
+    <section class="image-section"><h2>Trivia Raffle </h2><br>
+        <img class="scroll-image" src="CA Trivia Raffle.png" alt="Image 5">
+    </section>
+
+    <section class="image-section"><h2>Generic Entry </h2><br>
+        <img class="scroll-image" src="Generic Entry.png" alt="Image 6">
+    </section>
+<section class="text"> <h1><br><br><br><br><br><br><br><br><br><br><center> WARNING. CONFIRM PAYMENT BEFORE SCROLLING</h1></center></section>
+    <section class="image-section"><h2>GO Plus+ </h2><br>
+        <img class="scroll-image" src="GOPlusPlus Raffle.png" alt="Image 7">
+    </section>
+
+</body>
+</html>
